@@ -1,0 +1,10 @@
+Package: tennis_player_age
+Type: Package
+Title: Plots tennis player age gap against opponent throughout match history
+Version: 0.1.0
+Author: CJ
+Maintainer: CJ <cjsantos@berkeley.edu>
+Description: Downloads career data of a named tennis player and plots the age gap between the player's opoonents throughout their match history. 
+License: MIT
+Encoding: UTF-8
+LazyData: true
