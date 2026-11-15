@@ -1,10 +1,10 @@
-Package: tennis_player_age
-Type: Package
+Package: tennisplayerage
 Title: Plots tennis player age gap against opponent throughout match history
-Version: 0.1.0
-Author: CJ
-Maintainer: CJ <cjsantos@berkeley.edu>
+Version: 0.0.0.9000
+Authors@R: 
+    person("CJ", "S", , "cjsantos@berkeley.edu", role = c("aut", "cre"))
 Description: Downloads career data of a named tennis player and plots the age gap between the player's opoonents throughout their match history. 
 License: MIT
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
