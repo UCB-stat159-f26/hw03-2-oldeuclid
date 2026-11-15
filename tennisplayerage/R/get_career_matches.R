@@ -1,3 +1,19 @@
+# name format (ex. "serena williams" is "SerenaWilliams")
+format_player_name <- function(player_name) {
+  words <- strsplit(trimws(player_name), " +")[[1]]
+  first_letters <- toupper(substr(words, 1, 1))
+  paste(paste0(first_letters, substring(words, 2)), collapse = "")
+}
+
+
+# check name and give error if name not found
+check_career_js <- function(career_js, player_name) {
+  if (!grepl("matchmx", career_js)) {
+    stop("Couldn't find", player_name,
+         "'. Are you sure that's a tennis player?", call. = FALSE)
+  }
+}
+
 
 get_opponent_age <- function(values, match_dates) {
   birth_date <- !is.na(values) & grepl("^[0-9]{8}$", values)

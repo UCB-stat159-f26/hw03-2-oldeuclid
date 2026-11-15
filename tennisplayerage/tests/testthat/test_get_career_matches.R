@@ -3,6 +3,18 @@ read_mock_js <- function(file_name) {
   paste(lines, collapse = " ")
 }
 
+test_that("player names have same format", {
+  expect_equal(format_player_name("serena williams"), "SerenaWilliams")
+  expect_equal(format_player_name("Serena Williams"), "SerenaWilliams")
+  expect_equal(format_player_name("SerenaWilliams"), "SerenaWilliams")
+})
+
+test_that("false name gives error", {
+  female_js <- read_mock_js("FemalePlayerCareer.JS")
+  expect_error(check_career_js("", "Gaston Sanchez"), "Gaston Sanchez")
+  expect_no_error(check_career_js(female_js, "Serena Williams"))
+})
+
 test_that("female file: ages are calculated from birth dates", {
   serena_dob <- as.Date("1981-09-26")
   female_js <- read_mock_js("FemalePlayerCareer.JS")
